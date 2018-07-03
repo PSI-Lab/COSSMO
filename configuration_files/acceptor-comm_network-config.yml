@@ -1,0 +1,35 @@
+batch_norm_decay: 0.9
+batch_normalization: true
+batch_sizes: 3
+buckets: [0, 20, 50, 100, 500]
+comm_NN_LSTM: false
+comm_NN_LSTM_layers: 2
+comm_NN_LSTM_size: 100
+comm_NN_LSTM_steps: 5
+comm_NN_conv: true
+comm_NN_fc: false
+conv_params:
+- [24, 12, 1, 1, 1]
+- [8, 12, 1, 1, 1]
+data_dir: /path/to/dataset/acceptor
+dataset_type: dynamic
+dropout_keep_prob: 1.0
+event_type: acceptor
+exonic_seq_length: 40
+features: [intron_length]
+hidden_units: [100]
+init_scale_LSTM: 0.1
+init_scale_conv: 0.01
+init_scale_fc: 0.01
+intronic_seq_length: 40
+learning_rate: 0.0003
+lr_decay: false
+lr_decay_rate: 0.5
+lr_decay_step: [2000, 5000]
+make_rundir: false
+n_validation_files: 5
+n_validation_steps: 2000
+num_epochs: 100
+num_outputs: 1
+train_dir: /path/to/train/dir/acceptor/comm_network/
+validation_frequency: 5000

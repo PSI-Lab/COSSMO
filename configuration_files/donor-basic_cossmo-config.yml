@@ -1,0 +1,26 @@
+batch_sizes: [10, 5, 2, 2, 1, 1]
+buckets: [10, 15, 20, 50, 100]
+conv_params:
+- [24, 12, 1, 1, 1]
+- [12, 12, 1, 1, 1]
+- [12, 12, 1, 1, 1]
+- [12, 12, 1, 1, 1]
+data_dir: /path/to/dataset/donor
+dataset_type: dynamic
+dropout_keep_prob: 1.0
+early_stopping_delay: 100000
+event_type: donor
+exonic_seq_length: 40
+features: [intron_length]
+hidden_units: [100, 100]
+intronic_seq_length: 40
+learning_rate: 0.0001
+make_rundir: false
+max_sgd_steps: 600005
+n_outputs: 1
+n_validation_files: 5
+n_validation_steps: 1000
+num_epochs: 1000
+train_dir: /path/to/train/dir/donor/basic_cossmo/
+use_intron_length: true
+validation_frequency: 5000

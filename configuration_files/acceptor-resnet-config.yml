@@ -1,0 +1,56 @@
+batch_norm_decay: 0.9
+batch_normalization: true
+batch_sizes: [25, 10, 5, 1, 1]
+buckets: [0, 20, 50, 100, 500]
+comm_NN_LSTM: false
+comm_NN_LSTM_alternate: false
+comm_NN_LSTM_layers: 2
+comm_NN_LSTM_size: 100
+comm_NN_LSTM_steps: 5
+comm_NN_conv: false
+comm_NN_fc: false
+comm_NN_fc_final: false
+data_dir: /path/to/dataset/acceptor
+dataset_type: dynamic
+dropout_keep_prob: 1.0
+early_stopping_delay: 6
+event_type: acceptor
+exonic_seq_length: 40
+features: [intron_length]
+graphing_frequency: 1000
+hidden_units: [300, 100, 30]
+init_scale_LSTM: 0.1
+init_scale_conv: 0.01
+init_scale_fc: 0.01
+init_scale_fc_final: 0.0001
+intronic_seq_length: 40
+l2_decay: 1.0e-07
+learning_rate: 0.003
+lr_decay: true
+lr_decay_rate: 0.5
+lr_decay_step: [100000, 150000, 200000, 400000]
+make_rundir: false
+max_grad_norm: 20
+max_sgd_steps: 600005
+n_validation_files: 5
+n_validation_steps: 2000
+num_epochs: 1000
+num_outputs: 1
+out_LSTM_layers: 1
+out_LSTM_size: 100
+output_LSTM: false
+output_LSTM_bidirectional: true
+residual_net: true
+residual_net_preset: resnet_26
+resnet_params:
+- [24, 8, 1, 1, 1]
+- [8, 32, 8, 1]
+- [8, 64, 16, 2]
+- [8, 64, 16, 1]
+- [8, 128, 32, 2]
+- [8, 128, 32, 1]
+- [8, 256, 64, 1]
+- [8, 256, 64, 1]
+sort_ss_by_position: false
+train_dir: /path/to/train/dir/acceptor/resnet/
+validation_frequency: 5000

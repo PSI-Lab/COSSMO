@@ -11,4 +11,4 @@ dependencies:
   - pandas
   - setuptools
   - pip:
-      - tensorflow_gpu
+      - tensorflow_gpu=1.8

@@ -9,5 +9,6 @@ dependencies:
   - matplotlib
   - scipy
   - pandas
+  - setuptools
   - pip:
-    - tensorflow
+    - tensorflow=1.8

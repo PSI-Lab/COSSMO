@@ -587,17 +587,44 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--configuration-file', default=None)
-    parser.add_argument('--continue-from', default=None)
-    parser.add_argument('--gpus', default=None, type=int, nargs='+')
-    parser.add_argument('--intra-op-threads', default=0, type=int)
-    parser.add_argument('--inter-op-threads', default=0, type=int)
-    parser.add_argument('--test-only', default=False, action='store_true')
-    parser.add_argument('--fold', default=False, type=int)
+    parser.add_argument(
+        '--configuration-file', default=None,
+        help="Path to a configuration file, containing all hyperparameters, "
+             "model definitions, etc. See the provided examples for details."
+    )
+    parser.add_argument(
+        '--gpu', default=None, type=int,
+        help="GPU device ID to use for training. This is equivalent to setting "
+             "the CUDA_VISIBLE_DEVICES environment variable. "
+             "It is recommend to set this option when you have more than one "
+             "GPU device in your system to prevent TensorFlow from claiming "
+             "all devices."
+    )
+    parser.add_argument(
+        '--intra-op-threads', default=0, type=int,
+        help="See https://github.com/tensorflow/tensorflow/blob/"
+             "26b4dfa65d360f2793ad75083c797d57f8661b93/tensorflow/core/"
+             "protobuf/config.proto#L165 for the meaning of this parameter."
+    )
+    parser.add_argument(
+        '--inter-op-threads', default=0, type=int,
+    help="See https://github.com/tensorflow/tensorflow/blob/"
+         "26b4dfa65d360f2793ad75083c797d57f8661b93/tensorflow/core/"
+         "protobuf/config.proto#L165 for the meaning of this parameter."
+    )
+    parser.add_argument(
+        '--test-only', default=False, action='store_true',
+        help="Don't train, only evaluate test set."
+    )
+    parser.add_argument(
+        '--fold', default=False, type=int,
+        help="Cross-validation fold to train on. When set, this overrides the"
+             "`cv_fold` key in the configuration file."
+    )
     args = parser.parse_args()
 
-    if args.gpus is not None:
-        os.environ['CUDA_VISIBLE_DEVICES'] = ','.join(map(str, args.gpus))
+    if args.gpu is not None:
+        os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
 
     if args.configuration_file:
         configuration = yaml.load(open(args.configuration_file))
@@ -607,7 +634,7 @@ if __name__ == '__main__':
     if args.fold:
         configuration['cv_folds'] = [args.fold]
 
-    main(configuration, args.continue_from,
+    main(configuration, None,
          intra_op_threads=args.intra_op_threads,
          inter_op_threads=args.inter_op_threads,
          test_only=args.test_only)
