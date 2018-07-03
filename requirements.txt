@@ -1,0 +1,7 @@
+numpy
+pyyaml
+matplotlib
+scipy
+pandas
+setuptools
+tensorflow_gpu

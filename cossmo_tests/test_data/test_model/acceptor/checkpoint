@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/hannes/git/COSSMO/cossmo_tests/scripts/../test_data/test_model/acceptor/best-model.ckpt"
+all_model_checkpoint_paths: "/Users/hannes/git/COSSMO/cossmo_tests/scripts/../test_data/test_model/acceptor/best-model.ckpt"

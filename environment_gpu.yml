@@ -1,0 +1,14 @@
+name: cossmo
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=2
+  - numpy
+  - pyyaml
+  - matplotlib
+  - scipy
+  - pandas
+  - setuptools
+  - pip:
+      - tensorflow_gpu
