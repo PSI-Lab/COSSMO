@@ -1,0 +1,25 @@
+COSSMO
+
+Copyright (c) 2017, Deep Genomics Incorporated
+
+This license governs use of the COSSMO software and associated documentation (the “Software”). The
+Software consists of the following components: the COSSMO Model, COSSMO Training Code, and
+associated documentation. The COSSMO Model is provided in compiled, object code format only. The
+COSSMO Training Code is provided in a source code format only. The Software does not include
+individual-level genetic information or data and no rights to any such information or data are being
+granted under this license.
+Deep Genomics Incorporated hereby grants to the recipient of the Software, a limited, personal (non-
+assignable and non-sublicensable) license to use, copy and modify the Software for personal, academic,
+non-commercial use only. All other rights are strictly reserved. For greater certainty, the recipient of the
+Software is not permitted to distribute the software in any form, whether object code or source code or
+otherwise, to any third party, nor to reverse engineer or decompile the Software.
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE. IF YOU DECIDE TO EXPLOIT THE SOFTWARE IN ANY WAY, YOU
+HEREBY INDEMNIFY DEEP GENOMICS INCORPORATED FOR ANY CLAIMS, DAMAGES, FEES OR COSTS
+INCURRED BY IT IN CONNECTION WITH YOUR USE OF THE SOFTWARE.
+If you wish to obtain a license to the Software for any use that is not a personal, academic, non-
+commercial use, please contact Deep Genomics Incorporated by email to: bd@deepgenomics.com

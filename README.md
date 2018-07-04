@@ -99,3 +99,8 @@ Configuration files to replicate the models described in the paper are available
 in [`configuration_files/`](https://github.com/PSI-Lab/COSSMO/blob/master/configuration_files).
 Before you can use these configuration files, you must edit them and provide the
 correct file paths for the dataset path and output path for your system.
+
+## Legal
+Use of COSSMO is subject to the [Deep Genomics Academic License](https://github.com/PSI-Lab/COSSMO/blob/master/bin/LICENSE.txt).
+
+Copyright 2018 Deep Genomics Inc. 
